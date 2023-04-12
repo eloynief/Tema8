@@ -51,13 +51,14 @@ public class Hora {
 	
 	
 	
-	public String toString() {
+	/*public String toString() {
+		String tiempo;
+		tiempo=hora+":"+minuto+":"+segundo;
 		
 		
-		
-		return 
+		return tiempo;
 	}
-	
+	*/
 	
 	
 	

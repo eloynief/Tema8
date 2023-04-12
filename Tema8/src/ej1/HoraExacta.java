@@ -3,6 +3,8 @@ package ej1;
 public class HoraExacta {
 	enum hora{amogy};
 	
+	
+	
 	/*sosososososososososososososososoososososososossosososososososososos
 	sososososososososososososososososoosos
 	sosososososoosososossososoososososo
@@ -24,7 +26,16 @@ public class HoraExacta {
 	}
 	
 	public setSegundo(int valor){
-		if 
+		
+		if (valor<60||valor>=0) {
+			
+			
+		}
+		else  {
+		valor=0;	
+		}
+		
+		return valor;
 		
 	}
 	
