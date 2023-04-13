@@ -1,6 +1,6 @@
 package ej1;
 
-public class HoraExacta {
+public class HoraExacta extends Hora{
 	enum hora{amogy};
 	
 	
@@ -21,25 +21,34 @@ public class HoraExacta {
 	sossosososososososososososos
 	sososososososososososososo*/
 	
-	HoraExacta(int hora,int minuto,int segundo){
+	int segundos;
+	
+	public HoraExacta(int hora,int minuto,int segundo){
 		
 	}
 	
-	public setSegundo(int valor){
+	public void setSegundo(int valor){
 		
-		if (valor<60||valor>=0) {
-			
+		if (valor<60&&valor>=0) {
+			segundos = valor;
 			
 		}
 		else  {
 		valor=0;	
 		}
 		
-		return valor;
 		
 	}
-	
-	
+	//hace override del inc de clase hora
+	@Override
+	public void inc() {
+		//
+		segundos++;
+		if(segundos>=60) {
+			segundos=0;
+			super.inc();
+		}
+	}
 	
 	
 	
