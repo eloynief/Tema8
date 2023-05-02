@@ -29,8 +29,19 @@ public class Perecedero extends Productos {
 	//la reducción es
 	//en el get o en el constructor?
 	public double getPrecio() {
-		
-		
+		//si caduca el día siguiente, el precio
+		//se vuelve 1/4 del precio esperado
+		if (caducidad==1) {
+			precio=precio/4;
+		}
+		//si caduca en 2 días, entonces se vuelve un tercio del precio
+		else if (caducidad==2) {
+			precio=precio/3;
+		}
+		//si caducidad es 3, el precio se vuelve la mitad
+		else if (caducidad==3) {
+			precio=precio/2;
+		}
 		
 		return precio;
 	}
@@ -40,8 +51,11 @@ public class Perecedero extends Productos {
 	}
 	
 	//metodo toString
+	//el tostring muestra como quieres que se imprima por pantalla esa parte
+	
 		@Override
 		public String toString(){
+			
 			return nombre;
 		}
 	
